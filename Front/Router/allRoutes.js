@@ -3,9 +3,9 @@ import Route from "./Route.js";
 //Définir ici vos routes
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html", []),
-    new Route("/galerie", "Galerie", "/pages/galerie.html", []),
-    new Route("/connexion", "Connexion", "/pages/auth/signIn.html" , "js/auth/signIn.js", ['disconnected']),
-    new Route("/inscription", "Inscription", "/pages/auth/signUp.html", "js/auth/signUp.js", ['disconnected'] ),
+    new Route("/galerie", "Galerie", "/pages/galerie.html", [], "js/galerie.js"),
+    new Route("/connexion", "Connexion", "/pages/auth/signIn.html", ['disconnected'], "js/auth/signIn.js"),
+    new Route("/inscription", "Inscription", "/pages/auth/signUp.html", ['disconnected'], "js/auth/signUp.js"),
     new Route("/compte", "Mon compte", "/pages/auth/account.html", ['client', 'admin']),
     new Route("/modifier-pwd", "Modifier mot de passe", "/pages/auth/editPassword.html", ['client', 'admin']),
     new Route("/toutes-les-reservations", "Vos réservations", "/pages/reservations/allResa.html", ['client']),
